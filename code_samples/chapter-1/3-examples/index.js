@@ -7,7 +7,7 @@ mongodb.MongoClient.connect(uri, function(error, db) {
     process.exit(1);
   }
 
-  db.collection('sample').insert({ x: 1 }, function(error, result) {
+  db.collection('sample').insert({ dateTime: Date.now() }, function(error, result) {
     if (error) {
       console.log(error);
       process.exit(1);
@@ -21,7 +21,9 @@ mongodb.MongoClient.connect(uri, function(error, db) {
 
       console.log('Found docs:');
       docs.forEach(function(doc) {
+
         console.log(JSON.stringify(doc));
+
       });
       process.exit(0);
     });
