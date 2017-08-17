@@ -19,3 +19,9 @@ describe('my other feature', function() {
     }, 25);
   });
 });
+
+describe('my test', function() {
+    it('doesnt_work', function() {
+        assert.equal('A', 'A');
+    });
+});
