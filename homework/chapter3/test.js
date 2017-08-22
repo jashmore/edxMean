@@ -162,11 +162,13 @@ describe('Part 3 Assessment Tests', function() {
               number: '4242424242424242',
               cvc: '123',
               exp_month: '12',
-              exp_year: '2016'
+              exp_year: '2019'
             }
           }).
           end(function(error, res) {
             if (error) {
+
+              console.log(error);
               return done(error);
             }
 
